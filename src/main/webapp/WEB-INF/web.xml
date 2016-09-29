@@ -28,12 +28,9 @@
     
     <servlet-mapping>
         <servlet-name>default</servlet-name>
-        <url-pattern>*.html</url-pattern>
-        <url-pattern>*.js</url-pattern>
-        <url-pattern>*.css</url-pattern>
-        <url-pattern>*.woff2</url-pattern>
-        <url-pattern>*.png</url-pattern>
-        </servlet-mapping>
+        <url-pattern>/static/*</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+    </servlet-mapping>
 
     <listener>
         <listener-class>guice.tomcat.MyJerseyGuiceServletContextListener</listener-class>
