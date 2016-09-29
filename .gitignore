@@ -1,2 +1,7 @@
 *.iml
 target/
+node_modules/
+node_install/
+/src/main/webapp/node/
+/src/main/webapp/.idea/
+/src/main/webapp/dist/

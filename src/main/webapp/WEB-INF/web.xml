@@ -12,11 +12,28 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
+    
     <servlet-mapping>
         <servlet-name>Jersey Web Application</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>default</servlet-name>
+        <servlet-class>
+            org.apache.catalina.servlets.DefaultServlet
+        </servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.html</url-pattern>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.woff2</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        </servlet-mapping>
 
     <listener>
         <listener-class>guice.tomcat.MyJerseyGuiceServletContextListener</listener-class>

@@ -5,4 +5,5 @@ public class MyServiceImpl implements MyService {
     public String hello(String name) {
         return "Hello, " + name;
     }
+   
 }

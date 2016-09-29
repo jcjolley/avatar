@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class MyJerseyGuiceServletContextListener extends JerseyGuiceServletContextListener {
+
     @Override
     protected List<? extends Module> modules() {
         return Collections.singletonList(new ServletModule() {
