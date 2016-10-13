@@ -1,16 +1,47 @@
-<main>
-  <h1>Behold, the Avatar!</h1>
-  <form>
+<form [formGroup]="registerForm">
 	<label>Name:</label>
-	<input type="text" name="characterName">
+	<input type="text" formControlName="name"/>
 
 	<label>Race:</label>
-	<input type="text" name="characterRace">
+	<input type="text" formControlName="race"/>
+	<p *ngIf="registerForm.controls.name.errors">This field is required!</p>
+
+	<label>Age:</label>
+	<input type="text" formControlName="age"/>
 
 	<label>Class:</label>
-	<input type="text" name="characterClass">  
- 	
- 	<button type="submit">Create!</button>
-  </form>
+	<input type="text" formControlName="class"/>
+	<p *ngIf="registerForm.controls.class.errors">This field is required!</p>
 
-</main>
+	<label>Alignment:</label>
+	<input type="text" formControlName="alignment"/>
+
+	<fieldset formGroupName="stats">
+		<label>Strength:</label>
+		<input type="text" formControlName="strength"/>
+		<!-- <p *ngIf="registerForm.controls.stats.strength.errors">This field is required!</p> -->
+
+		<label>Dexterity:</label>
+		<input type="text" formControlName="dexterity"/>
+		<!-- <p *ngIf="registerForm.controls.dexterity.errors">This field is required!</p> -->
+
+		<label>Constitution:</label>
+		<input type="text" formControlName="constitution"/>
+		<!-- <p *ngIf="registerForm.controls.constitution.errors">This field is required!</p> -->
+
+		<label>Intelligence:</label>
+		<input type="text" formControlName="intelligence"/>
+		<!-- <p *ngIf="registerForm.controls.intelligence.errors">This field is required!</p> -->
+
+		<label>Wisdom:</label>
+		<input type="text" formControlName="intelligence"/>
+		<!-- <p *ngIf="registerForm.controls.wisdom.errors">This field is required!</p> -->
+
+		<label>Charisma:</label>
+		<input type="text" formControlName="charisma"/>
+		<!-- <p *ngIf="registerForm.controls.charisma.errors">This field is required!</p> -->
+	</fieldset>
+
+
+	<button type="submit">Create!</button>
+</form>
