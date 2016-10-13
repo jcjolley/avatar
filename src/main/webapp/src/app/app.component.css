@@ -6,3 +6,7 @@ main {
   display: block;
   background-color: #18191b;
 }
+
+label {
+    display: block;
+}
