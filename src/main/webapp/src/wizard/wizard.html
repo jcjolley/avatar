@@ -1,0 +1,16 @@
+<ng-content></ng-content>
+<div class="wizard-footer">
+	<button [style.visibility]="isOnFirstStep() ? 'hidden' : 'visible'" 
+	(click)="stempChange.emit(step-1)">
+	Previous
+	</button>
+	{{step}} / {{steps}}
+	<button *ngIf="!isOnFinalStep()"
+	    (click)="stepChange.emit(step + 1)">
+	    Next
+	</button>
+	<button *ngIf="isOnFinalStep()"
+	    (click)="finish.emit(step + 1)">
+	    {{finishText}}
+	</button>	
+</div>

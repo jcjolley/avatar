@@ -1,6 +1,6 @@
 <form [formGroup]="registerForm">
-	<label>Name:</label>
-	<input type="text" formControlName="name"/>
+<!-- 	<label>Name:</label>
+	<input type="text" formControlName="name" [formControl]="name"/>
 
 	<label>Race:</label>
 	<input type="text" formControlName="race"/>
@@ -14,34 +14,42 @@
 	<p *ngIf="registerForm.controls.class.errors">This field is required!</p>
 
 	<label>Alignment:</label>
-	<input type="text" formControlName="alignment"/>
+	<input type="text" formControlName="alignment"/> -->
 
-	<fieldset formGroupName="stats">
+<!-- 	<fieldset formGroupName="stats">
 		<label>Strength:</label>
-		<input type="text" formControlName="strength"/>
+		<input type="text" formControlName="strength"/> -->
 		<!-- <p *ngIf="registerForm.controls.stats.strength.errors">This field is required!</p> -->
 
-		<label>Dexterity:</label>
-		<input type="text" formControlName="dexterity"/>
+<!-- 		<label>Dexterity:</label>
+		<input type="text" formControlName="dexterity"/> -->
 		<!-- <p *ngIf="registerForm.controls.dexterity.errors">This field is required!</p> -->
 
-		<label>Constitution:</label>
-		<input type="text" formControlName="constitution"/>
+<!-- 		<label>Constitution:</label>
+		<input type="text" formControlName="constitution"/> -->
 		<!-- <p *ngIf="registerForm.controls.constitution.errors">This field is required!</p> -->
 
-		<label>Intelligence:</label>
-		<input type="text" formControlName="intelligence"/>
+<!-- 		<label>Intelligence:</label>
+		<input type="text" formControlName="intelligence"/> -->
 		<!-- <p *ngIf="registerForm.controls.intelligence.errors">This field is required!</p> -->
 
-		<label>Wisdom:</label>
-		<input type="text" formControlName="intelligence"/>
+<!-- 		<label>Wisdom:</label>
+		<input type="text" formControlName="wisdom"/> -->
 		<!-- <p *ngIf="registerForm.controls.wisdom.errors">This field is required!</p> -->
 
-		<label>Charisma:</label>
-		<input type="text" formControlName="charisma"/>
+<!-- 		<label>Charisma:</label>
+		<input type="text" formControlName="charisma"/> -->
 		<!-- <p *ngIf="registerForm.controls.charisma.errors">This field is required!</p> -->
-	</fieldset>
+	<!-- </fieldset> -->
 
+    <wizard [(step)]="step" (finish)="onFinish()">
+	  	<wizard-step>
+			Hey
+		</wizard-step>
+		<wizard-step>
+			Yo
+		</wizard-step>
+	</wizard>
 
 	<button type="submit">Create!</button>
 </form>
