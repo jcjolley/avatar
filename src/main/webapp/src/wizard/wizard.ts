@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
 	selector: 'wizard',
@@ -21,6 +22,6 @@ export class Wizard
 		const newSteps = this.steps + 1;
 		this.steps = newSteps;
 		return newSteps;
-	} 
+	}
 }
 

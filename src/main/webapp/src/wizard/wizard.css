@@ -1,3 +1,14 @@
-div {
-    background: pink;
+body{
+	padding: 10px;
+	border: solid black 2px;
+	width: 500px;
+	height: 300px;
+	position: relative;
+}
+
+.wizard-footer {
+	position: absolute;
+	margin-left: 50%;
+	margin-right: auto;
+	bottom: 10px;
 }

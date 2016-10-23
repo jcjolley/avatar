@@ -1,21 +1,32 @@
 <form [formGroup]="registerForm">
-<!-- 	<label>Name:</label>
-	<input type="text" formControlName="name" [formControl]="name"/>
-
-	<label>Race:</label>
-	<input type="text" formControlName="race"/>
-	<p *ngIf="registerForm.controls.name.errors">This field is required!</p>
-
-	<label>Age:</label>
-	<input type="text" formControlName="age"/>
-
-	<label>Class:</label>
-	<input type="text" formControlName="class"/>
-	<p *ngIf="registerForm.controls.class.errors">This field is required!</p>
-
-	<label>Alignment:</label>
-	<input type="text" formControlName="alignment"/> -->
-
+    <wizard [(step)]="step" (finish)="onFinish()">
+	  	<wizard-step>
+			<label>Name:</label>
+			<input type="text" formControlName="name"/>
+			<!-- [formControl]="name"/> -->
+		</wizard-step>
+		<wizard-step>
+			<label>Race:</label>
+			<input type="text" formControlName="race"/>
+			<!-- <p *ngIf="registerForm.controls.name.errors">This field is required!</p> -->
+		</wizard-step>
+		<wizard-step>
+			<label>Age:</label>
+			<!-- <input type="text" formControlName="age"/> -->
+		</wizard-step>
+		<wizard-step>
+			<label>Class:</label>
+			<!-- <input type="text" formControlName="class"/>
+			<p *ngIf="registerForm.controls.class.errors">This field is required!</p> -->
+		</wizard-step>
+		<wizard-step>
+			<label>Alignment:</label>		
+			<!-- <input type="text" formControlName="alignment"/> -->
+		</wizard-step>
+		<wizard-step>
+			<button type="submit">Create!</button>
+		</wizard-step>
+	</wizard>
 <!-- 	<fieldset formGroupName="stats">
 		<label>Strength:</label>
 		<input type="text" formControlName="strength"/> -->
@@ -41,15 +52,4 @@
 		<input type="text" formControlName="charisma"/> -->
 		<!-- <p *ngIf="registerForm.controls.charisma.errors">This field is required!</p> -->
 	<!-- </fieldset> -->
-
-    <wizard [(step)]="step" (finish)="onFinish()">
-	  	<wizard-step>
-			Hey
-		</wizard-step>
-		<wizard-step>
-			Yo
-		</wizard-step>
-	</wizard>
-
-	<button type="submit">Create!</button>
 </form>
