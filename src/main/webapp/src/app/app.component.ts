@@ -7,7 +7,6 @@ import '../../public/css/styles.css';
 
 @Component({
   	selector: 'my-app',
-  	// directives: [ Wizard, WizardStep ],
   	templateUrl: 'app.component.html',
   	styleUrls: ['app.component.css']
 })
@@ -40,8 +39,12 @@ export class AppComponent implements OnInit
 		});
 	}
 
+	save(model: FormGroup)
+	{
+		
+	}
+
 	onFinish() 
 	{
-		console.log("Finished!");
 	}
 }

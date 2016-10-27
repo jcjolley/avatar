@@ -1,8 +1,8 @@
-<form [formGroup]="registerForm">
+<form [formGroup]="registerForm" (ngSubmit)="save(myForm)">
     <wizard [(step)]="step" (finish)="onFinish()">
 	  	<wizard-step>
 			<label>Name:</label>
-			<input type="text" formControlName="name"/>
+			<input type="text" formControlName="name" />
 			<!-- [formControl]="name"/> -->
 		</wizard-step>
 		<wizard-step>
@@ -12,19 +12,25 @@
 		</wizard-step>
 		<wizard-step>
 			<label>Age:</label>
-			<!-- <input type="text" formControlName="age"/> -->
+			<input type="text" formControlName="age"/>
 		</wizard-step>
 		<wizard-step>
 			<label>Class:</label>
-			<!-- <input type="text" formControlName="class"/>
-			<p *ngIf="registerForm.controls.class.errors">This field is required!</p> -->
+			<input type="text" formControlName="class"/>
+			<!-- <p *ngIf="registerForm.controls.class.errors">This field is required!</p> -->
 		</wizard-step>
 		<wizard-step>
 			<label>Alignment:</label>		
-			<!-- <input type="text" formControlName="alignment"/> -->
+			<input type="text" formControlName="alignment"/>
 		</wizard-step>
-		<wizard-step>
-			<button type="submit">Create!</button>
+		<wizard-step ng-style="display: block">
+			Name: {{registerForm.value.name}}<br/>
+			Race: {{registerForm.value.race}}<br/>
+			Class: {{registerForm.value.class}}<br/>
+			Age: {{registerForm.value.age}}<br/>
+			Alignment: {{registerForm.value.alignment}}<br/>
+			Is this the Character you wish you create?<br/><br/>
+			<button type="submit">Create</button>
 		</wizard-step>
 	</wizard>
 <!-- 	<fieldset formGroupName="stats">
