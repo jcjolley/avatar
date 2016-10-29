@@ -23,13 +23,29 @@
 			<label>Alignment:</label>		
 			<input type="text" formControlName="alignment"/>
 		</wizard-step>
+		<wizard-step>
+			<label>STATS</label><br/>
+			Strength: {{registerForm.value.stats.strength}}<br/>
+			Dexterity: {{registerForm.value.stats.dexterity}}<br/>
+			Consitution: {{registerForm.value.stats.consitution}}<br/>
+			Intelligence: {{registerForm.value.stats.intelligence}}<br/>
+			Wisdom: {{registerForm.value.stats.wisdom}}<br/>
+			Charisma: {{registerForm.value.stats.charisma}}<br/>
+			<button (click)="rollStats()">Generate</button>
+		</wizard-step>
 		<wizard-step ng-style="display: block">
 			Name: {{registerForm.value.name}}<br/>
 			Race: {{registerForm.value.race}}<br/>
 			Class: {{registerForm.value.class}}<br/>
 			Age: {{registerForm.value.age}}<br/>
-			Alignment: {{registerForm.value.alignment}}<br/>
-			Is this the Character you wish you create?<br/><br/>
+			Alignment: {{registerForm.value.alignment}}<br/><br/>
+			Strength: {{registerForm.value.stats.strength}}<br/>
+			Dexterity: {{registerForm.value.stats.dexterity}}<br/>
+			Consitution: {{registerForm.value.stats.consitution}}<br/>
+			Intelligence: {{registerForm.value.stats.intelligence}}<br/>
+			Wisdom: {{registerForm.value.stats.wisdom}}<br/>
+			Charisma: {{registerForm.value.stats.charisma}}<br/><br/>
+			Is this the Character you wish you create?<br/>
 			<button type="submit">Create</button>
 		</wizard-step>
 	</wizard>
