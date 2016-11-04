@@ -1,1 +1,1 @@
-mysql -uroot -p$1 < ./avatar.sql
+mysql -uroot < ./avatar.sql
