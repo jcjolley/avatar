@@ -1,0 +1,1 @@
+mysql -uroot < ./avatar.sql
