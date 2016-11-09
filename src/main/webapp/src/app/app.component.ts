@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Wizard } from '../wizard/wizard';
 import { WizardStep } from '../wizard/wizard-step';
@@ -15,6 +15,9 @@ export class AppComponent implements OnInit
 { 
 	registerForm: FormGroup;
 	private step = 1;
+	races: String[];
+	classes: String[];
+	alignments: String[];
 
 	constructor(private formBuilder: FormBuilder) {}
 
@@ -37,6 +40,45 @@ export class AppComponent implements OnInit
 				charisma:     [0, Validators.required],
 			})
 		});
+
+		this.races = [
+		"Dragonborn",
+		"Drow",
+		"Dwarf",
+		"Elf",
+		"Gnome",
+		"Half-Elf",
+		"Half-Orc",
+		"Human",
+		"Tiefling",
+		];
+
+		this.classes = [
+		"Barbarian",
+		"Bard",
+		"Cleric",
+		"Druid",
+		"Fighter",
+		"Monk",
+		"Paladin",
+		"Ranger",
+		"Rogue",
+		"Sorceror",
+		"Warlock",
+		"Wizard"
+		];
+
+		this.alignments = [
+		"Lawful Good",
+		"Neutral Good",
+		"Chaotic Good",
+		"Lawful Neutral",
+		"Neutral",
+		"Chaotc Neutral",
+		"Lawful Evil",
+		"Neutral Evil",
+		"Chaotic Evil"
+		];
 	}
 
 	randomStat()

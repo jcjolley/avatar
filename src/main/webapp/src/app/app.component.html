@@ -7,7 +7,10 @@
 		</wizard-step>
 		<wizard-step>
 			<label>Race:</label>
-			<input type="text" formControlName="race"/>
+			<!-- <input type="text" formControlName="race"/> -->
+			<select formControlName="race">
+				<option *ngFor="let race of races" [value]="race">{{race}}</option>
+			</select>
 			<!-- <p *ngIf="registerForm.controls.name.errors">This field is required!</p> -->
 		</wizard-step>
 		<wizard-step>
@@ -16,12 +19,15 @@
 		</wizard-step>
 		<wizard-step>
 			<label>Class:</label>
-			<input type="text" formControlName="class"/>
-			<!-- <p *ngIf="registerForm.controls.class.errors">This field is required!</p> -->
+			<select formControlName="class">
+				<option *ngFor="let class of classes" [value]="class">{{class}}</option>
+			</select>
 		</wizard-step>
 		<wizard-step>
-			<label>Alignment:</label>		
-			<input type="text" formControlName="alignment"/>
+			<label>Alignment:</label>
+			<select formControlName="alignment">
+				<option *ngFor="let alignment of alignments" [value]="alignment">{{alignment}}</option>
+			</select>		
 		</wizard-step>
 		<wizard-step>
 			<label>STATS</label><br/>
